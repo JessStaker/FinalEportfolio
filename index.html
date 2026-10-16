@@ -1,0 +1,293 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jessica Staker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_K1PoFs8pB2YVWStDxrUls");
+    })();
+  </script>
+</head>
+
+<body>
+  <section id="landing-page" onmousemove="moveBackground(event)">
+    <nav>
+      <figure>
+        <img id="personal-logo" src="https://i.pinimg.com/736x/2e/25/d3/2e25d3f25beed028c552917e6a5552fb.jpg" alt="">
+      </figure>
+      <ul class="nav__link--list">
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">About</a>
+        </li>
+        <li class="nav__link">
+          <a href="#projects" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Projects</a>
+        </li>
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Contact</a>
+        </li>
+        <li class="nav__link click" onclick="toggleContrast()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          "><i class="fas fa-adjust"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="header__content">
+        <h1 class="title">Hello</h1>
+        <h1 class="title" style="color: rgb(166, 227, 196)">I'm Jessica.</h1>
+        <p class="header__para">
+          I'm a <b class="color: rgb(166, 227, 196)" style="color: rgb(166, 227, 196)">Frontend Software Engineer</b> with a 
+          passion for turning ideas into beautiful web applications that put the user experience first.
+          <br>
+          Here's a bit more <b class="color: rgb(166, 227, 196)" style="color: rgb(166, 227, 196)">about me</b>.
+        </p>
+        <div class="social__list">
+          <a href="https://www.linkedin.com/in/jessica-staker-3889a3309" target="_blank" class="social__link click">
+            <img src="./assets/linkedin.svg" alt="LinkedIn logo">
+          </a>
+          <a href="https://github.com/JessStaker" target="_blank" class="social__link click">
+            <img src="./assets/github.svg" alt="GitHub logo">
+          </a>
+          <a href="./assets/resume.pdf" target="_blank" class="social__link click">
+            <img src="./assets/pdf.svg" alt="PDF logo">
+          </a>
+        </div>
+      </div>
+    </header>
+    <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
+        <img src="./assets/email.svg" alt="Envelope logo">
+      </button>
+    </a>
+    <a href="#projects" class="scroll">
+      <div class="scroll__icon click"></div>
+    </a>
+    <div class="modal">
+      <div class="modal__half modal__about">
+        <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+        <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+        <p class="modal__para">
+          I'm a <b class="color: rgb(166, 227, 196)" style="color: rgb(166, 227, 196)">frontend software engineer</b> with experience developing
+          websites like a <b class="color: rgb(166, 227, 196)" style="color: rgb(166, 227, 196)">Treact</b> mockup and <b class="color: rgb(166, 227, 196)" style="color: rgb(166, 227, 196)">HealthGuard</b>.
+          <br>
+          I currently have not held an official position at a tech company, but am excited to get my foot in the door. 
+          I am familiar with applications such as <b class="color: rgb(166, 227, 196)" style="color: rgb(166, 227, 196)">HTML</b>, <b class="color: rgb(166, 227, 196)" style="color: rgb(166, 227, 196)">CSS</b>, 
+          <b class="color: rgb(166, 227, 196)" style="color: rgb(166, 227, 196)">JavaScript</b> and 
+          <b class="color: rgb(166, 227, 196)" style="color: rgb(166, 227, 196)">Visual Studio Code</b>.
+        </p>
+        <div class="modal__languages">
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./assets/html.svg" alt="HTML5 logo">
+            <span class="language__name">HTML</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./assets/css.svg" alt="CSS3 logo">
+            <span class="language__name">CSS</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./assets/js.svg" alt="JavaScript logo">
+            <span class="language__name">JavaScript</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./assets/vs.svg" alt="">
+            <span class="language__name">Visual Studio Code</span>
+          </figure>
+        </div>
+      </div>
+      <div class="modal__half modal__contact">
+        <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+        <h3 class="modal__title modal__title--contact">
+          Let's connect!
+        </h3>
+        <h3 class="modal__sub-title modal__sub-title--contact">
+          I'm currently open to new opportunities.
+        </h3>
+        <form id="contact__form" onsubmit="contact(event)">
+          <div class="form__item">
+            <label class="form__item--label">Name</label>
+            <input class="input" name="user_name" type="text" required="">
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Email</label>
+            <input class="input" name="user_email" type="email" required="">
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Message</label>
+            <textarea class="input" name="message" type="text" required=""></textarea>
+          </div>
+          <button id="contact__submit" class="form__submit">
+            Send it my way
+          </button>
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fas fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          Thanks for the message! Looking forward to speaking to you soon.
+        </div>
+      </div>
+    </div>
+    <img src="./assets/semi circle.svg" class="shape shape--0">
+    <img src="./assets/circle2.svg" class="shape shape--1">
+    <img src="./assets/squiggly.svg" class="shape shape--2">
+    <img src="./assets/circle2.svg" class="shape shape--3">
+    <img src="./assets/angle.svg" class="shape shape--4">
+    <img src="./assets/circle2.svg" class="shape shape--5">
+    <img src="./assets/squiggly.svg" class="shape shape--6">
+    <img src="./assets/circle2.svg" class="shape shape--7">
+    <img src="./assets/semi circle.svg" class="shape shape--8">
+  </section>
+  <section id="projects">
+    <div class="container">
+      <div class="row">
+        <h1 class="section__title">
+          Here are some of my <span class="color: rgb(166, 27,2 196)" style="color: rgb(166, 227, 196)">projects</span>
+        </h1>
+        <ul class="project__list">
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/treact.svg" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Treact Project
+                </h3>
+                <h4 class="project__description--sub-title">
+                  HTML, CSS, JavaScript, VisualStudio Code
+                </h4>
+                <p class="project__description--para">
+                  As one of my first projects, I built a mockup of a Treact web page. 
+                  This project was built to help me learn the basics of HTML, CSS and 
+                  JavaScript.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://googleinstore.com.au/" class="project__description--link">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="https://i.pinimg.com/736x/1c/8f/47/1c8f470782ad06582bc179fab89aa2fc.jpg" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  HealthGuard Gym Project
+                </h3>
+                <h4 class="project__description--sub-title">
+                  HTML, CSS, VisualStudio Code
+                </h4>
+                <p class="project__description--para">
+                    This project was built to help me learn the basics of HTML, CSS and 
+                    JavaScript. It is a faux gym website that I created to practice how 
+                    to build a website from scratch, and to learn how to implement
+                    different features and functionality into the layout and design of 
+                    the page.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/Eportfolio YT.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  E-Portfolio
+                </h3>
+                <h4 class="project__description--sub-title">
+                  HTML, CSS, JavaScript, VisualStudio Code
+                </h4>
+                <p class="project__description--para">
+                  I built this interactive e-portfolio to apply for jobs such as this one!
+                </p>
+                <div class="project__description--links">
+                  <a href="https://www.youtube.com/watch?v=C8BlRjB3vYI" target="_blank" class="project__description--link">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                  <a href="https://github.com/JessStaker" target="_blank" class="project__description--link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://github.com/JessStaker" target="_blank" class="project__description--link">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row footer__row">
+        <a href="#" class="footer__anchor">
+          <figure class="footer__logo">
+            <img src="https://i.pinimg.com/736x/2e/25/d3/2e25d3f25beed028c552917e6a5552fb.jpg" class="footer__logo--img" alt="">
+          </figure>
+          <span class="footer__logo--popper">
+            Top
+            <i class="fas fa-arrow-up"></i>
+          </span>
+        </a>
+        <div class="footer__social--list">
+          <a href="https://github.com/JessStaker" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            GitHub
+          </a>
+          <a href="www.linkedin.com/in/jessica-staker-3889a3309" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            LinkedIn
+          </a>
+          <a href="#" onclick="toggleModal()" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Contact
+          </a>
+          <a href="./assets/resume.pdf" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Resume
+          </a>
+        </div>
+        <div class="footer__copyright">Copyright © 2026 Jessica Staker</div>
+      </div>
+    </div>
+  </footer>
+
+
+</body></html>
