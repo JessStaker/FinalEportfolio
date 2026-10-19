@@ -1,3 +1,6 @@
+//template_agujabz
+//service_846ek7r
+//P6bgsRIl9JpktugjG
 let isModalOpen = false;
 let contrastToggle = false;
 const scaleFactor = 1 / 20;
@@ -32,10 +35,10 @@ function contact(event) {
   loading.classList += " modal__overlay--visible";
   emailjs
     .sendForm(
-      "service_80ih0if",
-      "template_d9refyl",
+      'service_846ek7r',
+      'template_agujabz',
       event.target,
-      "user_K1PoFs8pB2YVWStDxrUls"
+      'P6bgsRIl9JpktugjG'
     )
     .then(() => {
       loading.classList.remove("modal__overlay--visible");
