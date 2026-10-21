@@ -1,4 +1,4 @@
-//template_agujabz
+//template_5sitans
 //service_846ek7r
 //P6bgsRIl9JpktugjG
 let isModalOpen = false;
@@ -36,7 +36,7 @@ function contact(event) {
   emailjs
     .sendForm(
       'service_846ek7r',
-      'template_agujabz',
+      'template_5sitans',
       event.target,
       'P6bgsRIl9JpktugjG'
     )
@@ -47,7 +47,7 @@ function contact(event) {
     .catch(() => {
       loading.classList.remove("modal__overlay--visible");
       alert(
-        "The email service is temporarily unavailable. Please contact me directly on email@email.com"
+        "The email service is temporarily unavailable. Please contact me directly at jesswillyerd@hotmail.com"
       );
     });
 }
